@@ -13,18 +13,26 @@
 }
 
 .inventoryModalContent{
-    background-color: #fefefe;
+    background-color: #555;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    /*border: 1px solid #888;*/
     width: 80%;
+    border: none;
+    border-radius: 20px;
 }
 
 #closeModal{
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
+    font-size: 17px;
     font-weight: bold;
+    background-color: #555;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    width: 5%;
 }
 
 #closeModal:hover, #closeModal:focus{
@@ -37,12 +45,51 @@
     content: "";
     display: block;
     position: fixed;
-    top: 15%;
+    top: 25%;
     bottom: auto;
-    left: 7px;
+    right: 90.5%;
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 25px 35px 25px 0;
-    border-color: transparent #ffffff transparent transparent;
+    border-color: transparent #555 transparent transparent;
+}
+
+#buttonRow{
+    background-color: #555;
+    border: none;
+    outline: none;
+    overflow: auto;
+}
+
+.tabButton{
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tabButton:hover{
+    background-color: #777;
+}
+
+.tabContent{
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    /*border-radius: 20px;*/
+}
+
+#Inventory{
+    background-color: red;
+}
+
+#Stats{
+    background-color: green;
 }

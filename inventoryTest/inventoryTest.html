@@ -12,8 +12,18 @@
     <!-- Modal -->
     <div id="inventoryModal" class="modal">
         <div class="inventoryModalContent">
-            <span id="closeModal">&times;</span>
-            <p>content</p>
+            <div id="buttonRow">
+                <button class="tabButton" onclick="openTab('Inventory', this, 'red')" id="defaultOpen")>Inventory</button>
+                <button class="tabButton" onclick="openTab('Stats', this, 'green')")>Stats</button>
+                <button id="closeModal">&times;</button>
+            </div>
+
+            <div id="Inventory" class="tabContent">
+                <h3>content inventory</h3>
+            </div>
+            <div id="Stats" class="tabContent">
+                <h3>content stats</h3>
+            </div>
         </div>
         <div class="modalArrow"></div>
     </div>
