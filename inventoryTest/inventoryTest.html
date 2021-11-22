@@ -7,25 +7,80 @@
 </head>
 <body>
 
+    <button id="startingItemsButton">Starting items</button>
+    <br>
+    <button id="rollStatsButton"><img src="dicePlaceholder.png" width="100"></button>
+    <br>
     <button id="inventoryButton"><img src="penPaperPlaceholder.png" width="100"></button>
 
     <!-- Modal -->
     <div id="inventoryModal" class="modal">
         <div class="inventoryModalContent">
             <div id="buttonRow">
-                <button class="tabButton" onclick="openTab('Inventory', this, 'red')" id="defaultOpen")>Inventory</button>
-                <button class="tabButton" onclick="openTab('Stats', this, 'green')")>Stats</button>
+                <button id="InventoryTabButton" class="tabButton" onclick="openTab('Inventory', this, '#E5E5E5')")>Inventory</button>
+                <button id="StatsTabButton" class="tabButton" onclick="openTab('Stats', this, '#E5E5E5')")>Stats</button>
                 <button id="closeModal">&times;</button>
             </div>
 
             <div id="Inventory" class="tabContent">
-                <h3>content inventory</h3>
+                <p>Gold:</p>
+                <p id="goldValue">0</p>
+                <div id="InventoryContent">
+                    <!-- items added by js -->
+                </div>
             </div>
             <div id="Stats" class="tabContent">
-                <h3>content stats</h3>
+                <div id="StatsContent">
+                    <div>
+                        <p class="statHeader">Initial</p>
+                    </div>
+                    <div>
+                        <p class="statHeader">Current</p>
+                    </div>
+                    <div class="statCell">
+                        <p class="statName">Strength</p>
+                        <p class="statValue" id="initialStrengthValue">0</p>
+                        <progress id="initialStrength" value="0" max="30"></progress>
+                    </div>
+                    <div class="statCell">
+                        <p class="statName">Strength</p>
+                        <p class="statValue" id="currentStrengthValue">0</p>
+                        <progress id="currentStrength" value="0" max="30"></progress>
+                    </div>
+                    <div class="statCell">
+                        <p class="statName">Skill</p>
+                        <p class="statValue" id="initialSkillValue">0</p>
+                        <progress id="initialSkill" value="0" max="30"></progress>
+                    </div>
+                    <div class="statCell">
+                        <p class="statName">Skill</p>
+                        <p class="statValue" id="currentSkillValue">0</p>
+                        <progress id="currentSkill" value="0" max="30"></progress>
+                    </div>
+                    <div class="statCell">
+                        <p class="statName">Luck</p>
+                        <p class="statValue" id="initialLuckValue">0</p>
+                        <progress id="initialLuck" value="0" max="30"></progress>
+                    </div>
+                    <div class="statCell">
+                        <p class="statName">Luck</p>
+                        <p class="statValue" id="currentLuckValue">0</p>
+                        <progress id="currentLuck" value="0" max="30"></progress>
+                    </div>
+                    <div class="statCell">
+                        <p class="statName">Venom</p>
+                        <p class="statValue" id="initialVenomValue">0</p>
+                        <progress id="initialVenom" value="0" max="30"></progress>
+                    </div>
+                    <div class="statCell">
+                        <p class="statName">Venom</p>
+                        <p class="statValue" id="currentVenomValue">0</p>
+                        <progress id="currentVenom" value="0" max="30"></progress>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="modalArrow"></div>
+        <div id="modalArrow" class="modalArrow"></div>
     </div>
 
 </body>

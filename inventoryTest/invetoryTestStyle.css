@@ -19,7 +19,7 @@
     /*border: 1px solid #888;*/
     width: 80%;
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 #closeModal{
@@ -81,15 +81,102 @@
 .tabContent{
     color: white;
     display: none;
-    padding: 100px 20px;
+    padding: 50px 20px;
     height: 100%;
-    /*border-radius: 20px;*/
+}
+
+#InventoryTabButton{
+    border-radius: 20px 20px 0px 0px;
 }
 
 #Inventory{
-    background-color: red;
+    background-color: #E5E5E5;
+    border-radius: 0px 20px 20px 20px;
+    color: #2C2C2C;
+}
+
+#Inventory > p{
+    display: inline;
+}
+
+#InventoryContent{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+
+.itemCell{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2C2C2C;
+    width: fit-content;
+}
+
+#StatsTabButton{
+    border-radius: 20px 20px 0px 0px;
 }
 
 #Stats{
-    background-color: green;
+    background-color: #E5E5E5;
+    border-radius: 20px;
+    color: #2C2C2C;
+}
+
+#StatsContent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.statCell{
+    width: fit-content;
+}
+
+.statName{
+    /*display: inline;*/
+    float: left;
+    margin-top: 0px;
+}
+
+.statValue{
+    /*display: inline;*/
+    float: right;
+    margin-top: 0px;
+}
+
+/* TODO styling progress bars for IE10 and moz */
+progress[value]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    color: #2F2F2F;
+    display: block;
+    margin-top: 20px;
+}
+
+progress[value]::-webkit-progress-bar{
+    background-color: #2F2F2F;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+progress[value]::-webkit-progress-value{
+    border-radius: 10px;
+}
+
+#initialStrength[value]::-webkit-progress-value, #currentStrength[value]::-webkit-progress-value{
+    background-color: #6DB066;
+}
+
+#initialSkill[value]::-webkit-progress-value, #currentSkill[value]::-webkit-progress-value{
+    background-color: #E07820;
+}
+
+#initialVenom[value]::-webkit-progress-value, #currentVenom[value]::-webkit-progress-value{
+    background-color: #A459CC;
+}
+
+#currentLuck[value]::-webkit-progress-value, #initialLuck[value]::-webkit-progress-value{
+    background-color: #606ED5;
 }
