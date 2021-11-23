@@ -12,8 +12,8 @@ let startingItemsButton = document.getElementById("startingItemsButton");
 
 window.addEventListener('load', (event) => {
     addGold(5);
-    addItem("Backpack", 1, "/assets/images/inventory/backpackPlaceholder.png", "backpack");
-    addItem("Sword", 1, "/assets/images/inventory/swordPlaceholder.jpg", "sword");
+    addItem("Backpack", 1, "../assets/images/inventory/backpackPlaceholder.png", "backpack");
+    addItem("Sword", 1, "../assets/images/inventory/swordPlaceholder.jpg", "sword");
 
     let initialSkill = randomInt(1, 6) + 6;
     let initialStrength = randomInt(1, 6) + randomInt(1, 6) + 12;
