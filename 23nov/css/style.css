@@ -5,8 +5,21 @@
          url('../assets/fonts/parking-regular-webfont.woff2') format('woff2'),
          url('../assets/fonts/parking-regular-webfont.woff') format('woff'),
          url('../assets/fonts/parking-regular-webfont.ttf') format('truetype');
+         url('../assets/fonts/parking-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'argesta_displayregular';
+    src: url('argestadisplay-regular-webfont.eot');
+    src: url('argestadisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('argestadisplay-regular-webfont.woff2') format('woff2'),
+    url('argestadisplay-regular-webfont.woff') format('woff'),
+    url('argestadisplay-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 body {
@@ -267,6 +280,10 @@ section .img img {
 
 section .text p {
     text-align: justify-all;
+    font-family: "Open Sans Light";
+    font-size: 1.2vw; /*carefull*/
+    padding-bottom: 10px;
+
 }
 
 section .chapterButtons a {
@@ -283,16 +300,19 @@ section .chapterButtons .button-left {
     border: solid 1px white;
     border-radius: 20px 0 0 20px;
     padding: 10px;
+    font-size: 1.5vw;
 }
 
 section .chapterButtons .button-middle {
     border: solid 1px white;
     border-radius: 0 0 0 0;
     padding: 10px;
+    font-size: 1.5vw;
 }
 
 section .chapterButtons .button-right {
     border: solid 1px white;
+    font-size: 1.5vw;
     border-radius: 0 20px 20px 0;
     padding: 10px;
 }
@@ -482,4 +502,81 @@ progress[value]::-webkit-progress-value{
 
 #currentLuck[value]::-webkit-progress-value, #initialLuck[value]::-webkit-progress-value{
     background-color: #606ED5;
+}
+
+@media only screen and (max-width: 800px) {
+    /*
+    .left-container {
+        height: 300px;
+        width:5%;
+        position: fixed;
+        top: 33%;
+        margin-left: 150px;
+    }
+
+    section .left {
+        width: 40%;
+        margin-right: 100px;
+        float: right;
+    }
+
+     */
+    section .text p {
+        text-align: justify-all;
+        font-family: "Open Sans Light";
+        font-size: 4vw; /*carefull*/
+        padding-bottom: 10px;
+
+    }
+
+    section {
+        display: grid;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    section .top {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    section .bottom {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    section .left {
+        width: 70%; /*carefull*/
+        margin-right: 0;
+        float: right;
+    }
+
+    section .right {
+        width: 70%;
+        margin-left: 100px;
+        float: right;
+    }
+
+/*Buttons________________________________*/
+    section .chapterButtons .button-left {
+        border: solid 1px white;
+        border-radius: 20px 0 0 20px;
+        padding: 10px;
+        font-size: 3vw;
+    }
+
+    section .chapterButtons .button-middle {
+        border: solid 1px white;
+        border-radius: 0 0 0 0;
+        padding: 10px;
+        font-size: 3vw;
+    }
+
+    section .chapterButtons .button-right {
+        border: solid 1px white;
+        font-size: 3vw;
+        border-radius: 0 20px 20px 0;
+        padding: 10px;
+    }
 }
