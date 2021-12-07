@@ -199,9 +199,8 @@ body {
  }
 
   .container-all-stories {
-    width: 80%;
+    width: 60%;
     margin: auto;
-    display: flex;
   }
 
   .container-all-stories h1 {
@@ -410,6 +409,7 @@ section .chapterButtons .button-right {
 
 #InventoryTabButton{
     border-radius: 20px 20px 0px 0px;
+    font-family: 'parkingregular';
 }
 
 #Inventory{
@@ -437,6 +437,7 @@ section .chapterButtons .button-right {
 
 #StatsTabButton{
     border-radius: 20px 20px 0px 0px;
+    font-family: 'parkingregular';
 }
 
 #Stats{
@@ -578,5 +579,12 @@ progress[value]::-webkit-progress-value{
         font-size: 3vw;
         border-radius: 0 20px 20px 0;
         padding: 10px;
+    }
+
+    section .chapterButtons .button-solo {
+        border: solid 1px white;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 3vw;
     }
 }
