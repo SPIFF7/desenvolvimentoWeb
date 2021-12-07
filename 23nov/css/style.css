@@ -80,8 +80,8 @@ body {
     height: 300px;
     width:25%;
     position: fixed;
-    top: 33%;
     margin-left: 150px;
+      top: 25%;
   }
   
   .form-login {
@@ -196,6 +196,28 @@ body {
  .search {background-color: red;}
  .search form {
      float: right;
+     margin-right: 2%;
+ }
+
+ .search .searchIcon {
+     padding-top: 5px;
+     margin-right: 5px;
+ }
+
+ .search .searchBar {
+     border: 1px solid white;
+     border-radius: 10px;
+     background-color: white;
+     padding: 10px;
+ }
+
+ .search .searchButton {
+     border: solid 2px white;
+     border-radius: 8px;
+     padding: 10px;
+     font-size: 1em;
+     color: white;
+     background-color: #252525;
  }
 
   .container-all-stories {
@@ -203,15 +225,21 @@ body {
     margin: auto;
   }
 
-  .container-all-stories h1 {
-      width: 300px;
-      height: 300px;
-    margin-left: 100px;
+.container-all-stories .stories {
+    display: inline-flex;
+    margin-top: 30px;
+}
+
+  .container-all-stories .title {
+    margin-top: 5%;
   }
 
+.container-all-stories .title h1 {
+    font-size: 4em;
+}
+
   .links-all-stories {
-    width: 300px;
-    height: 200px;
+    width: 50%;
     margin-right: 50px;
   }
 
@@ -226,7 +254,7 @@ body {
   }
 
   .links-all-stories img {
-    width: 300px;
+    width: 100%;
   }
 
 /**********************
@@ -280,9 +308,13 @@ section .img img {
 section .text p {
     text-align: justify-all;
     font-family: "Open Sans Light";
-    font-size: 1.2vw; /*carefull*/
+    font-size: 1.2em; /*carefull*/
     padding-bottom: 10px;
 
+}
+
+section .chapterButtons {
+    margin-left: 15px;
 }
 
 section .chapterButtons a {
@@ -305,6 +337,13 @@ section .chapterButtons .button-left {
 section .chapterButtons .button-middle {
     border: solid 1px white;
     border-radius: 0 0 0 0;
+    padding: 10px;
+    font-size: 1.5vw;
+}
+
+section .chapterButtons .button-solo {
+    border: solid 1px white;
+    border-radius: 20px;
     padding: 10px;
     font-size: 1.5vw;
 }
@@ -525,7 +564,7 @@ progress[value]::-webkit-progress-value{
     section .text p {
         text-align: justify-all;
         font-family: "Open Sans Light";
-        font-size: 4vw; /*carefull*/
+        font-size: 1.2em; /*carefull*/
         padding-bottom: 10px;
 
     }
@@ -559,7 +598,18 @@ progress[value]::-webkit-progress-value{
         float: right;
     }
 
+    .container-all-stories .stories {
+        display: inline-grid;
+    }
+
+    .links-all-stories {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
 /*Buttons________________________________*/
+
     section .chapterButtons .button-left {
         border: solid 1px white;
         border-radius: 20px 0 0 20px;
