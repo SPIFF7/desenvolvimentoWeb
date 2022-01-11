@@ -33,6 +33,21 @@ window.addEventListener('load', (event) => {
     setStat("currentStrength", initialStrength);
     setStat("currentLuck", initialLuck);
     setStat("currentVenom", initialVenom);
+
+    if(localStorage.getItem("gold") != null){
+        if(window.location.href != localStorage.getItem("location")){
+            window.location = localStorage.getItem("location");
+        }
+        setGold(localStorage.getItem("gold"));
+        setStat("initialStrength", localStorage.getItem("initialStrength"));
+        setStat("currentStrength", localStorage.getItem("currentStrength"));
+        setStat("initialSkill", localStorage.getItem("initialSkill"));
+        setStat("currentSkill", localStorage.getItem("currentSkill"));
+        setStat("initialLuck", localStorage.getItem("initialLuck"));
+        setStat("currentLuck", localStorage.getItem("currentLuck"));
+        setStat("initialVenom", localStorage.getItem("initialVenom"));
+        setStat("currentVenom", localStorage.getItem("currentVenom"));
+    }
   });
 
 // rollStatsButton.onclick = function (){
@@ -178,6 +193,19 @@ function removeItem(ID, quantity){
 
 function randomInt(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+window.onbeforeunload = function (){
+    localStorage.setItem("location", window.location.href);
+    localStorage.setItem("gold", getGold());
+    localStorage.setItem("initialStrength", getStat("initialStrength"));
+    localStorage.setItem("currentStrength", getStat("currentStrength"));
+    localStorage.setItem("initialSkill", getStat("initialSkill"));
+    localStorage.setItem("currentSkill", getStat("currentSkill"));
+    localStorage.setItem("initialLuck", getStat("initialLuck"));
+    localStorage.setItem("currentLuck", getStat("currentLuck"));
+    localStorage.setItem("initialVenom", getStat("initialVenom"));
+    localStorage.setItem("currentVenom", getStat("currentVenom"));
 }
 
 document.getElementById("InventoryTabButton").click();
