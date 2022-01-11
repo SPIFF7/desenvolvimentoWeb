@@ -499,6 +499,7 @@ section .chapterButtons .button-right {
     /*display: inline;*/
     float: left;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .statValue{
@@ -508,6 +509,14 @@ section .chapterButtons .button-right {
     margin-top: 0px;
 }
 
+.minusButton{
+    width: 15px;
+}
+
+.plusButton{
+    width: 15px;
+}
+
 /* TODO styling progress bars for IE10 and moz */
 progress[value]{
     -webkit-appearance: none;
@@ -515,8 +524,7 @@ progress[value]{
     appearance: none;
     border: none;
     color: #2F2F2F;
-    display: block;
-    margin-top: 20px;
+    vertical-align: 3px;
 }
 
 progress[value]::-webkit-progress-bar{

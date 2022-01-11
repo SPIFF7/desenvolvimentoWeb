@@ -106,6 +106,20 @@ function getStat(stat){
     return document.getElementById(stat).getAttribute("value");
 }
 
+function decrementStat(stat){
+    let textValue = stat + "Value";
+    let decrementedStat = parseInt(document.getElementById(stat).getAttribute("value")) - 1;
+    document.getElementById(textValue).innerText = decrementedStat;
+    document.getElementById(stat).setAttribute("value", decrementedStat);
+}
+
+function incrementStat(stat){
+    let textValue = stat + "Value";
+    let incrementedStat = parseInt(document.getElementById(stat).getAttribute("value")) + 1;
+    document.getElementById(textValue).innerText = incrementedStat;
+    document.getElementById(stat).setAttribute("value", incrementedStat);
+}
+
 function setGold(value){
     document.getElementById("goldValue").innerText = value;
 }
