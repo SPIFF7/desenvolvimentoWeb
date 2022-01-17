@@ -47,6 +47,8 @@ window.addEventListener('load', (event) => {
         setStat("currentLuck", localStorage.getItem("currentLuck"));
         setStat("initialVenom", localStorage.getItem("initialVenom"));
         setStat("currentVenom", localStorage.getItem("currentVenom"));
+
+        localStorage.clear();
     }
   });
 
