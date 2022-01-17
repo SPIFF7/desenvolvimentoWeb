@@ -35,20 +35,22 @@ window.addEventListener('load', (event) => {
     setStat("currentVenom", initialVenom);
 
     if(localStorage.getItem("gold") != null){
-        if(window.location.href != localStorage.getItem("location")){
-            window.location = localStorage.getItem("location");
-        }
-        setGold(localStorage.getItem("gold"));
-        setStat("initialStrength", localStorage.getItem("initialStrength"));
-        setStat("currentStrength", localStorage.getItem("currentStrength"));
-        setStat("initialSkill", localStorage.getItem("initialSkill"));
-        setStat("currentSkill", localStorage.getItem("currentSkill"));
-        setStat("initialLuck", localStorage.getItem("initialLuck"));
-        setStat("currentLuck", localStorage.getItem("currentLuck"));
-        setStat("initialVenom", localStorage.getItem("initialVenom"));
-        setStat("currentVenom", localStorage.getItem("currentVenom"));
+        if(document.title == localStorage.getItem("storyTitle")){
+            if(window.location.href != localStorage.getItem("location")){
+                window.location = localStorage.getItem("location");
+            }
+            setGold(localStorage.getItem("gold"));
+            setStat("initialStrength", localStorage.getItem("initialStrength"));
+            setStat("currentStrength", localStorage.getItem("currentStrength"));
+            setStat("initialSkill", localStorage.getItem("initialSkill"));
+            setStat("currentSkill", localStorage.getItem("currentSkill"));
+            setStat("initialLuck", localStorage.getItem("initialLuck"));
+            setStat("currentLuck", localStorage.getItem("currentLuck"));
+            setStat("initialVenom", localStorage.getItem("initialVenom"));
+            setStat("currentVenom", localStorage.getItem("currentVenom"));
 
-        localStorage.clear();
+            localStorage.clear();
+        }
     }
   });
 
@@ -208,6 +210,7 @@ window.onbeforeunload = function (){
     localStorage.setItem("currentLuck", getStat("currentLuck"));
     localStorage.setItem("initialVenom", getStat("initialVenom"));
     localStorage.setItem("currentVenom", getStat("currentVenom"));
+    localStorage.setItem("storyTitle", document.title);
 }
 
 document.getElementById("InventoryTabButton").click();
